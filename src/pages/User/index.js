@@ -26,7 +26,6 @@ export default class User extends React.Component {
     this.state = {
       stars: [],
       loading: false,
-      error: null,
       user: {},
     };
   }
@@ -43,19 +42,17 @@ export default class User extends React.Component {
       this.setState({
         stars: response.data,
         loading: false,
-        error: null,
         user,
       });
     } catch (err) {
       this.setState({
-        error: err.message,
         loading: false,
       });
     }
   }
 
   render() {
-    const { user, stars, loading, error } = this.state;
+    const { user, stars, loading } = this.state;
 
     return (
       <Container>
