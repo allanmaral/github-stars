@@ -21,7 +21,7 @@ expo start
 ou
 ```sh
 npm install
-npm run expo start
+expo start
 ```
 
 ## :memo: Licença
